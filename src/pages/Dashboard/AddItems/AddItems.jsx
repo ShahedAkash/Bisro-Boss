@@ -72,11 +72,14 @@ const AddItems = () => {
                             </div>
                             <select defaultValue="default" {...register('category', { required: true })} className="select select-bordered w-full ">
                                 <option disabled value="default">Select a Category</option>
-                                <option value="salad">Salad</option>
-                                <option value="pizza">Pizza</option>
-                                <option value="soup">Soup</option>
-                                <option value="dessert">Dessert</option>
-                                <option value="drinks">Drinks</option>
+                                <option value="bangla">Bangla Food</option>
+                                <option value="chinese">Chinese & Thai Food</option>
+                                <option value="setmenu">Set Menu Food</option>
+                                <option value="continental">Continental Food</option>
+                                <option value="fastfood">Fast Food</option>
+                                <option value="salad">Salad & Beverages</option>
+                                <option value="popular">Signature Food</option>
+                                <option value="dessert">Dessert & Cofe</option>
                             </select>
 
                         </label>

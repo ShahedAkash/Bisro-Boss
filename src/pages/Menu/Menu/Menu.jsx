@@ -14,11 +14,14 @@ import MenuCategory from '../MenuCategory/MenuCategory';
 
 const Menu = () => {
     const [menu] = useMenu();
-    const desserts = menu.filter(item => item.category === 'dessert')
-    const soup = menu.filter(item => item.category === 'soup')
-    const offered = menu.filter(item => item.category === 'offered')
+    const bangla = menu.filter(item => item.category === 'bangla')
+    const chinese = menu.filter(item => item.category === 'chinese')
+    const setmenu = menu.filter(item => item.category === 'setmenu')
+    const continental = menu.filter(item => item.category === 'continental')
+    const fastfood = menu.filter(item => item.category === 'fastfood')
     const salad = menu.filter(item => item.category === 'salad')
-    const pizza = menu.filter(item => item.category === 'pizza')
+    const popular = menu.filter(item => item.category === 'popular')
+    const dessert = menu.filter(item => item.category === 'dessert')
 
     return (
         <div>
@@ -28,16 +31,22 @@ const Menu = () => {
             <Cover img={menuImg} title={'Our menu'}></Cover>
             {/* Main Cover */}
             <SectionTitle SubHeading={'Dont Miss'} heading={'Todays Offer'}></SectionTitle>
-            {/* Offered meu items */}
-            <MenuCategory items={offered}></MenuCategory>
-            {/* Dessert menu items */}
-            <MenuCategory items={desserts} title="dessert" img={dessertImg}></MenuCategory>
-            {/* Pizza menu items */}
-            <MenuCategory items={pizza} title="pizza" img={pizzaImg}></MenuCategory>
+            {/* popular meu items */}
+            <MenuCategory items={popular}></MenuCategory>
+            {/* Chinese menu items */}
+            <MenuCategory items={chinese} title="Chinese & Thai Food" img={dessertImg}></MenuCategory>
+            {/* continental menu items */}
+            <MenuCategory items={continental} title="Continental Food" img={pizzaImg}></MenuCategory>
+            {/* fastfood menu items */}
+            <MenuCategory items={fastfood} title="Fast Food" img={saladImg}></MenuCategory>
+            {/* bangla menu items */}
+            <MenuCategory items={bangla} title="Bangla Food" img={soupImg}></MenuCategory>
             {/* salad menu items */}
-            <MenuCategory items={salad} title="salad" img={saladImg}></MenuCategory>
-            {/* soup menu items */}
-            <MenuCategory items={soup} title="soup" img={soupImg}></MenuCategory>
+            <MenuCategory items={salad} title="Salad & Beverages" img={soupImg}></MenuCategory>
+            {/* set Menu menu items */}
+            <MenuCategory items={setmenu} title="Set Menu" img={soupImg}></MenuCategory>
+            {/* dessert menu items */}
+            <MenuCategory items={dessert} title="Dessert & Cofe" img={soupImg}></MenuCategory>
         </div>
     );
 };

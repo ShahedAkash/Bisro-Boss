@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
-//  import cafeLogo from '../../../assets/home/cafe-chyujhal.png'
+ import cafeLogo from '../../../../public/cafe.png'
 import { FaCartShopping } from "react-icons/fa6";
 import useCart from "../../../hooks/useCart";
 import UseAdmin from "../../../hooks/UseAdmin";
@@ -57,9 +57,9 @@ const NavBar = () => {
                     </div>
                     <a className="text-xl hover:bg-none">
                         <div>
-                            {/* <img className="w-[150px] h-[100px] -mt-4" src={cafeLogo} alt="" /> */}
-                            <p className="text-3xl">Bistro Boss</p>
-                            <p className="text-lg pl-6">Resturent</p>
+                            <img className="w-[150px] h-[100px] -mt-4" src={cafeLogo} alt="" />
+                            {/* <p className="text-3xl">Bistro Boss</p>
+                            <p className="text-lg pl-6">Resturent</p> */}
                         </div>
                     </a>
                 </div>

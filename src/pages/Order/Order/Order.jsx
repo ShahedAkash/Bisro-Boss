@@ -20,11 +20,14 @@ const Order = () => {
 
     
 
-    const desserts = menu.filter(item => item.category === 'dessert')
-    const soup = menu.filter(item => item.category === 'soup')
-    const drinks = menu.filter(item => item.category === 'drinks')
+    const bangla = menu.filter(item => item.category === 'bangla')
+    const chinese = menu.filter(item => item.category === 'chinese')
+    const setmenu = menu.filter(item => item.category === 'setmenu')
+    const continental = menu.filter(item => item.category === 'continental')
+    const fastfood = menu.filter(item => item.category === 'fastfood')
     const salad = menu.filter(item => item.category === 'salad')
-    const pizza = menu.filter(item => item.category === 'pizza')
+    const popular = menu.filter(item => item.category === 'popular')
+    const dessert = menu.filter(item => item.category === 'dessert')
 
     return (
         <div>
@@ -34,26 +37,38 @@ const Order = () => {
             <Cover img={orderCoverImg} title={'Order Food'}></Cover>
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
+                    <Tab>Bangla Food</Tab>
+                    <Tab>Chinese & Thai Food</Tab>
+                    <Tab>Set Menu</Tab>
                     <Tab>Salad</Tab>
-                    <Tab>Pizza</Tab>
-                    <Tab>Soup</Tab>
-                    <Tab>Dessert</Tab>
-                    <Tab>Drinks</Tab>
+                    <Tab>Continental Food</Tab>
+                    <Tab>Fast Food</Tab>
+                    <Tab>Signature Food</Tab>
+                    <Tab>Dessert & Cofe</Tab>
                 </TabList>
+                <TabPanel>
+                    <OrderTab items={bangla}></OrderTab>
+                </TabPanel>
+                <TabPanel>
+                    <OrderTab items={chinese}></OrderTab>
+                </TabPanel>
+                <TabPanel>
+                    <OrderTab items={setmenu}></OrderTab>
+                </TabPanel>
                 <TabPanel>
                     <OrderTab items={salad}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={pizza}></OrderTab>
+                    <OrderTab items={continental}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={soup}></OrderTab>
+                    <OrderTab items={fastfood}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={desserts}></OrderTab>
+                    <OrderTab items={popular}></OrderTab>
                 </TabPanel>
                 <TabPanel>
-                    <OrderTab items={drinks}></OrderTab>
+                    <OrderTab items={dessert}></OrderTab>
                 </TabPanel>
             </Tabs>
         </div>
